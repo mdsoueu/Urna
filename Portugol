@@ -1,0 +1,84 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		//Entrada: candidato 1, candidato 2, candidato 3, candidato 4, candidato 5
+		inteiro candidato
+		inteiro barry=0, quill=0, hamada=0, morales=0, parker=0
+		//Voto válido
+		inteiro qtd_votoval=0
+		//Entrada: repetir
+		real parar=0
+		//Entrada: quantidade
+		inteiro quantidade=0
+
+		//Comando - enquanto --> se a condiÃ§Ã£o for verdadeira, irÃ¡ repetir.
+		enquanto (parar<1000)
+		{ //INFORMAÃ‡Ã•ES QUE IRÃƒO APARECER NA TELA
+			escreva("\n--------------------------")
+			escreva("\n\nCandidato Barry Allen - 55","\nCandidato Peter Jason Quill - 04","\nCandidato Hiro Hamada - 23")
+			escreva("\nCandidato Miles Gonzalo Morales - 11","\nCandidato Peter Benjamin Parker - 84","\nVoto nulo - 1")
+			escreva("\n\nInforme o nÃºmero: ")
+			leia(candidato) 
+			quantidade=quantidade+1		
+		//Comando - escolha --> candidato, branco/nulo, voto invÃ¡lido.
+		escolha (candidato)
+		{
+			caso 1: //Nulo
+				escreva("Voto nulo confirmado!")
+				pare
+			
+      caso 55: // Candidato 1
+				escreva("Candidato Barry Allen, voto confirmado!")
+				barry=barry+1
+				qtd_votoval = qtd_votoval+1
+				escreva("\nVotos para Barry Allen: ",barry)
+				pare
+
+			caso 04: //Candidato 2
+				escreva("Candidato Peter Jason Quill, voto confirmado!")
+				quill=quill+1
+				qtd_votoval = qtd_votoval+1
+				escreva("\nVotos para Peter Jason Quill: ",quill)
+				pare
+
+			caso 23: //Candidato 3
+				escreva("Candidato Hiro Hamada, voto confirmado!")
+				hamada=hamada+1
+				qtd_votoval = qtd_votoval+1
+				escreva("\nVotos para Hiro Hamada: ",hamada)
+				pare
+
+			caso 11: //Candidato 4
+				escreva("Candidato Miles Gonzalo Morales, voto confirmado!")
+				morales=morales+1
+				qtd_votoval = qtd_votoval+1
+				escreva("\nVotos para Miles Gonzalo Morales: ",morales)
+				pare
+
+			caso 84: //Candidato 5
+				escreva("Candidato Peter Benjamin Parker, voto confirmado!")
+				parker=parker+1
+				qtd_votoval = qtd_votoval+1
+				escreva("\nVotos para Peter Benjamin Parker: ",parker)
+				pare
+
+			caso contrario: //Voto invÃ¡lido
+				escreva("Voto invÃ¡lido")
+				pare
+
+			caso 2: //Encerrar votaÃ§Ã£o
+				parar=parar+1000
+		}
+		escreva("\nTotal de votos ",quantidade)
+		escreva("\nPercentuais da votaÃ§Ã£o: ")
+		escreva("\nCandidato Barry Allen: ",(barry*100)/quantidade,"%")
+		escreva("\nCandidato Peter Jason Quill: ",(quill*100)/quantidade,"%")
+		escreva("\nCandidato Hiro Hamada: ",(hamada*100)/quantidade,"%")
+		escreva("\nCandidato Miles Gonzalo Morales: ",(morales*100)/quantidade,"%")
+		escreva("\nCandidato Peter Benjamin Parker: ",(parker*100)/quantidade,"%")
+		escreva("\nVotos vÃ¡lidos: ",(qtd_votoval*100)/quantidade,"%")
+		}
+	}
+}
